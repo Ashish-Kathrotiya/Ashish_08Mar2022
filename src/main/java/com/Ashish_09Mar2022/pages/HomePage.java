@@ -33,5 +33,9 @@ public class HomePage extends CommonDriverUtils {
 		$(wishlistIcon).click();
 		waitForAngularRequestsToFinish();
 	}
+	
+	public void closeBrowser() {
+		getDriver().close();
+	}
 
 }

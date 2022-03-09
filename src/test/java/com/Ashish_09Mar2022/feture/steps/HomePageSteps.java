@@ -29,5 +29,10 @@ public class HomePageSteps {
     public void clickOnWishlistIcon() throws Throwable {
     	homepage.navigateToWishlist();
     }
+    
+    @And("^user close the browser$")
+    public void user_close_the_browser() throws Throwable {
+        homepage.closeBrowser();
+    }
 
 }

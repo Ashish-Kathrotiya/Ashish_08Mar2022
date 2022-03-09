@@ -11,7 +11,11 @@ public class BasketPage extends CommonDriverUtils{
 	String lblYears = "//*[text()='%s']";
 	String lblThreadColor = "//p/*[contains(text(),'%s')]";
 	String editDesign = "(//a[contains(text(),'%s')])[2]";
-	By imgPreview = By.xpath("(//img[@src='https://static.contrado.com/BasketItems/2022-3/9d1803e7-c9fe-4eb8-86f9-e967706f6750/9d1803e7-c9fe-4eb8-86f9-e967706f6750_version_82b874d2-62f2-401b-bdaf-cf10171a4a1c_0.jpeg'])[2]");
+	String closeIcon = "xpath://h2[contains(text(),'Would')]/following-sibling::img";
+	By imgPreview = By.xpath("(//img[@alt='Boys Premium T-Shirt'])");
+	By removeProduct = By.cssSelector("a.remove__button.basket-hide-on-mobile.js-remove-item-toggle");
+	By btnRemoveProduct = By.cssSelector("button.items__remove--yes.js-btn-with-loader.js-delete-line-item");
+	By lblEmptyBasket = By.xpath("//p[text()='Your basket is currently empty.']");
 	
 	
 	public void verifyProductDetail(String year, String threadColor) {
@@ -23,8 +27,21 @@ public class BasketPage extends CommonDriverUtils{
 		Assert.assertTrue("Image preview is visible", isElementDisplay(getDriver(), imgPreview));
 	}
 	
+	public void closeAd() {
+		$(closeIcon).click();
+	}
+	
 	public void clickOnEditDesign(String text) {
 		getDriver().findElement(By.xpath(String.format(editDesign, text))).click();
+	}
+	
+	public void removeProductFromCart() {
+		$(removeProduct).click();
+		$(btnRemoveProduct).click();
+	}
+	
+	public void verifyEmptyBasketMesage() {
+		Assert.assertTrue("EmptyBasketMessage is shown", isElementDisplay(getDriver(), lblEmptyBasket));
 	}
 	
 	

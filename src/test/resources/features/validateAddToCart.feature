@@ -24,15 +24,15 @@ Scenario: verify flow to add product in cart
 	And user updates details of product
 	And user navigates to Image & Text Tools tab
 	And user clicks on Remove option
-#	And user clicks on "Delete" option from "Confirm Delete" popup
-#	And user clicks on "Add Text" option
-#	And user enters maximum character in "Add Text Here"
-#	And user clicks on "Add Text" option
-#	And user clicks on the "Auto Size" option to set text in the center
-#	And user clicks on the "Update Design" option
-#	And user clicks on "Proceed to cart" option
-#	Then verify product details on cart screen
-#	And verify product preview on cart screen
-#	And user deletes product form the cart
-#	Then verify empty basket message
-	
+  And user clicks on "Delete" option from "Confirm Delete" popup
+	And user clicks on Add Text option
+	And user enters maximum character in Add Text Here
+	And user clicks on Add Text button
+	And user clicks on the Auto Size option to set text in the center
+	And user clicks on the Update Design option
+	And user clicks on Proceed to cart option
+	Then verify updated product details on cart screen
+	And verify product preview on cart screen
+	And user deletes product form the cart
+	Then verify empty basket message
+	And user close the browser

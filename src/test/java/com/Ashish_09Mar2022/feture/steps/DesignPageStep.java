@@ -82,6 +82,36 @@ public class DesignPageStep {
     public void clicksOnRemove() throws Throwable {
 		designpage.clickOnRemove();
     }
+	
+	@And("^user clicks on \"([^\"]*)\" option from \"([^\"]*)\" popup$")
+    public void confirmDelete(String strArg1, String strArg2) throws Throwable {
+		designpage.confirmDelete(strArg1, strArg2);
+    }
+	
+	@And("^user clicks on Add Text option$")
+    public void addText() throws Throwable {
+       designpage.clicksOnAddText();
+    }
+	
+	@And("^user enters maximum character in Add Text Here$")
+    public void enterText() throws Throwable {
+		designpage.enterTextInAddText();
+    }
+	
+	@And("^user clicks on Add Text button$")
+    public void performAddText() throws Throwable {
+		designpage.perofrmAddText();
+    }
+	
+	@And("^user clicks on the Auto Size option to set text in the center$")
+    public void performAutoSize() throws Throwable {
+		designpage.performAutoSize();
+    }
+	
+	@And("^user clicks on the Update Design option$")
+    public void UpdateDesign() throws Throwable {
+		designpage.clickOnPreviewAndBuy();
+    }
 
 
 }

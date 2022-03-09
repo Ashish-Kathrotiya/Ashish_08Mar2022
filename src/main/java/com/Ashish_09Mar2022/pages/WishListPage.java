@@ -27,8 +27,8 @@ public class WishListPage extends CommonDriverUtils {
 		System.out.println("productPrice >>" + SerchPage.productPrice);
 		System.out.println("productDetail >>" + SerchPage.productDetail);
 		
-		Assert.assertTrue("item description shpuld match", wishListProductDetail.equals(SerchPage.productDetail));
-		Assert.assertTrue("item description shpuld match", wishListProductPrice.equals(SerchPage.productPrice));
+		Assert.assertTrue("item description should match", wishListProductDetail.equals(SerchPage.productDetail));
+		Assert.assertTrue("item price list should match", wishListProductPrice.equals(SerchPage.productPrice));
 		
 	}
 
