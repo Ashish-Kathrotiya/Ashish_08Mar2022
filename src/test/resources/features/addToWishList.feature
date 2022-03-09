@@ -9,4 +9,3 @@ Scenario: verify product detail inside wishlist screen
 	And user add product to whishlist
 	And user navigates to wishlist page
 	Then user validates product details againts search page details
-	

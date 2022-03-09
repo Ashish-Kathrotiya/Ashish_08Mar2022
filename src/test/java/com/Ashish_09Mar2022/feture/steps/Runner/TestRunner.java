@@ -7,7 +7,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 
-@CucumberOptions(features = "src/test/resources/features/addToWishList.feature", glue = {
+@CucumberOptions(features = "src/test/resources/features/validateAddToCart.feature", glue = {
 		"com.Ashish_09Mar2022.feture.steps"})
 
 public class TestRunner {

@@ -24,5 +24,10 @@ public class SearchPageSteps {
     public void addProductToWishList() throws Throwable {
 		searchpage.addToWishlist();
 	}
+	
+	@And("^navigate to product detail page by clicking product from list$")
+    public void navigateToProductDetailPage() throws Throwable {
+		searchpage.navigateToProductDetailPage(FileUtils.readData(TestData.PRODUCT_CATEGORY.getColumnNumber()));
+	}
 
 }

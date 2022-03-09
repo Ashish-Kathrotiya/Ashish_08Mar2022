@@ -32,4 +32,8 @@ public class SerchPage extends CommonDriverUtils {
 		$(addToWishList).click();
 	}
 	
+	public void navigateToProductDetailPage(String productName){
+		getDriver().findElement(By.xpath(String.format(listItem, productName))).click();
+	}
+	
 }
